@@ -32,6 +32,9 @@ find data/ -type f -exec chmod 666 {} \;
 find module/ -type d -exec chmod 777 {} \;
 find module/ -type f -exec chmod 666 {} \;
 
+# Initialize sqlite database
+touch data/zf3-doctrine.sqlite
+
 docker-php-entrypoint "$1"
 
 
