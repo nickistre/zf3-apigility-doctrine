@@ -1,6 +1,6 @@
 version: "2"
 services:
-  apigility:
+  web:
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,3 +8,6 @@ services:
      - "8080:80"
     volumes:
      - .:/var/www
+    environment:
+     - XDEBUG_ENABLE
+     - XDEBUG_REMOTE_HOST
